@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>661026607157-2dva12p75uldujfibu0es7pi92pjgt74.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.661026607157-2dva12p75uldujfibu0es7pi92pjgt74</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAO_pKeTnng0p7nBLI4mH532v6__DdX4FQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>661026607157</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>TrinhThai.Authen-Firebase-SwiftUI</string>
+	<key>PROJECT_ID</key>
+	<string>authen-swiftui</string>
+	<key>STORAGE_BUCKET</key>
+	<string>authen-swiftui.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:661026607157:ios:484f50a1ded33bc9ac217c</string>
+	<key>DATABASE_URL</key>
+	<string>https://authen-swiftui.firebaseio.com</string>
+</dict>
+</plist>

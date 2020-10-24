@@ -1,0 +1,6 @@
+framework module Pods_Authen_Firebase_SwiftUI {
+  umbrella header "Pods-Authen_Firebase_SwiftUI-umbrella.h"
+
+  export *
+  module * { export * }
+}
