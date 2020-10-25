@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct AuthForm: View {
+    @EnvironmentObject var authState: AuthState
     @State var email: String = ""
     @State var password: String = ""
     @State var isOn: Bool = false
@@ -28,11 +29,15 @@ struct AuthForm: View {
             Toggle("Show pass", isOn: $isOn)
             
             Button("Login") {
-                
+                self.login()
             }.disabled(email.isEmpty || password.isEmpty)
         }
         .textFieldStyle(RoundedBorderTextFieldStyle())
         .padding(30)
+    }
+    
+    private func login() {
+        authState.login(email: email, password: password)
     }
 }
 

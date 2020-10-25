@@ -4,8 +4,8 @@
 target 'Authen_Firebase_SwiftUI' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-pod 'Firebase/Analytics'
-
+  
   # Pods for Authen_Firebase_SwiftUI
-
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
 end
