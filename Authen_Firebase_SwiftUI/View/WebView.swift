@@ -9,18 +9,15 @@
 import SwiftUI
 import WebKit
 
-//class ViewModel: ObservableObject {
-//    @Published var isLoading: Bool = false
-//    @Published var error: Error? = nil
-//    
-//}
+class ViewModel: ObservableObject {
+    @Published var isLoading: Bool = false
+    @Published var error: Error? = nil
+}
 
 struct WebView: UIViewRepresentable {
-    @Binding var isLoading: Bool
-    @Binding var error: Error?
-    
-//    @ObservableObject var viewModel: ViewModel
-    
+//    @Binding var isLoading: Bool
+//    @Binding var error: Error?
+    @ObservedObject var viewModel: ViewModel
     let url: URL
     
     func makeUIView(context: Context) -> WKWebView {
@@ -31,40 +28,44 @@ struct WebView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        
     }
     
     func makeCoordinator() -> Coordinator {
-        Coordinator(isLoading: $isLoading, error: $error)
+        Coordinator(viewModel: viewModel)
     }
     
     class Coordinator: NSObject, WKNavigationDelegate {
-        @Binding var isLoading: Bool
-        @Binding var error: Error?
-
+//        @Binding var isLoading: Bool
+//        @Binding var error: Error?
+        @ObservedObject var viewModel: ViewModel
         
-        init(isLoading: Binding<Bool>, error: Binding<Error?>) {
-            self._error = error
-            self._isLoading = isLoading
-            super.init()
+        init(viewModel: ViewModel) {
+            self.viewModel = viewModel
         }
         
+//        init(isLoading: Binding<Bool>, error: Binding<Error?>) {
+//            self._error = error
+//            self._isLoading = isLoading
+//            super.init()
+//        }
+
+        
         func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-            isLoading = true
-            error = nil
+            viewModel.isLoading = true
+            viewModel.error = nil
         }
         
         func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-            isLoading = false
+            viewModel.isLoading = false
         }
         
         func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-            isLoading = false
-            self.error = error
+            viewModel.isLoading = false
+            viewModel.error = error
         }
         
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-            isLoading = false
+            viewModel.isLoading = false
         }
     }
 }

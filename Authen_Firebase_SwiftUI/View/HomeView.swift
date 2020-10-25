@@ -9,21 +9,23 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State var isLoading: Bool = false
-    @State var error: Error?
+//    @State var isLoading: Bool = false
+//    @State var error: Error?
+    @ObservedObject var viewModel = ViewModel()
     
     var body: some View {
         NavigationView {
             ZStack {
                 if let url = URL(string: "https://apple.com") {
-                    WebView(isLoading: $isLoading, error: $error, url: url)
+//                    WebView(isLoading: $isLoading, error: $error, url: url)
+                    WebView(viewModel: viewModel, url: url)
                 } else {
                     Text("HOmeView").font(.callout)
                 }
                 
-                if isLoading {
+                if viewModel.isLoading {
                     ActivityIndicator()
-                } else if let error = error {
+                } else if let error = viewModel.error {
                     Text(error.localizedDescription)
                 }
             }
