@@ -9,17 +9,32 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var isLoading: Bool = false
+    @State var error: Error?
+    
     var body: some View {
         NavigationView {
-            Text("HOmeView")
-                .font(.callout)
+            ZStack {
+                if let url = URL(string: "https://apple.com") {
+                    WebView(isLoading: $isLoading, error: $error, url: url)
+                } else {
+                    Text("HOmeView").font(.callout)
+                }
+                
+                if isLoading {
+                    ActivityIndicator()
+                } else if let error = error {
+                    Text(error.localizedDescription)
+                }
+            }
+            
         }.background(Color.yellow)
         .navigationBarTitle("Home", displayMode: .inline)
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
-}
+//struct HomeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeView()
+//    }
+//}

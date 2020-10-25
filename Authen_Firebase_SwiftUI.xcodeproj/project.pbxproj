@@ -10,9 +10,10 @@
 		0E3E21F425446DB300500904 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E3E21F325446DB300500904 /* GoogleService-Info.plist */; };
 		0E3E2208254473F800500904 /* AuthForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3E2207254473F800500904 /* AuthForm.swift */; };
 		0E3E220D25447DFE00500904 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3E220C25447DFE00500904 /* AuthState.swift */; };
-		0E3E221F2544F4FD00500904 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3E221E2544F4FD00500904 /* ProgressView.swift */; };
+		0E3E221F2544F4FD00500904 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3E221E2544F4FD00500904 /* ActivityIndicator.swift */; };
 		0E3E22222544F7B100500904 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3E22212544F7B100500904 /* SignupView.swift */; };
 		0E3E2225254516AA00500904 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3E2224254516AA00500904 /* HomeView.swift */; };
+		0E3E222B25454FB400500904 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3E222A25454FB400500904 /* WebView.swift */; };
 		0EEDAC6B2544657000026681 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEDAC6A2544657000026681 /* AppDelegate.swift */; };
 		0EEDAC6D2544657000026681 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEDAC6C2544657000026681 /* SceneDelegate.swift */; };
 		0EEDAC6F2544657000026681 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEDAC6E2544657000026681 /* ContentView.swift */; };
@@ -26,9 +27,10 @@
 		0E3E21F325446DB300500904 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0E3E2207254473F800500904 /* AuthForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthForm.swift; sourceTree = "<group>"; };
 		0E3E220C25447DFE00500904 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
-		0E3E221E2544F4FD00500904 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		0E3E221E2544F4FD00500904 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		0E3E22212544F7B100500904 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		0E3E2224254516AA00500904 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0E3E222A25454FB400500904 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		0EEDAC672544657000026681 /* Authen_Firebase_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Authen_Firebase_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EEDAC6A2544657000026681 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EEDAC6C2544657000026681 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +71,8 @@
 				0EEDAC6E2544657000026681 /* ContentView.swift */,
 				0E3E2207254473F800500904 /* AuthForm.swift */,
 				0E3E22212544F7B100500904 /* SignupView.swift */,
-				0E3E221E2544F4FD00500904 /* ProgressView.swift */,
+				0E3E221E2544F4FD00500904 /* ActivityIndicator.swift */,
+				0E3E222A25454FB400500904 /* WebView.swift */,
 				0E3E2224254516AA00500904 /* HomeView.swift */,
 			);
 			path = View;
@@ -256,8 +259,9 @@
 				0E3E220D25447DFE00500904 /* AuthState.swift in Sources */,
 				0EEDAC6F2544657000026681 /* ContentView.swift in Sources */,
 				0E3E2225254516AA00500904 /* HomeView.swift in Sources */,
+				0E3E222B25454FB400500904 /* WebView.swift in Sources */,
 				0E3E2208254473F800500904 /* AuthForm.swift in Sources */,
-				0E3E221F2544F4FD00500904 /* ProgressView.swift in Sources */,
+				0E3E221F2544F4FD00500904 /* ActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
