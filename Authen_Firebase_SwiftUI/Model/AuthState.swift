@@ -20,6 +20,12 @@ class AuthState: NSObject, ObservableObject {
     override init() {
         loggedinUser = auth.currentUser
         super.init()
+        auth.addStateDidChangeListener(authStateChanged)
+    }
+    
+    private func authStateChanged(with auth: Auth, user: User?) {
+        guard user != self.loggedinUser else { return }
+        loggedinUser = user
     }
     
     func login(email: String, password: String) {
@@ -36,6 +42,10 @@ class AuthState: NSObject, ObservableObject {
             print("Login success: \(user)")
           }
 
+    }
+    
+    func signOut() {
+        try? auth.signOut()
     }
     
     

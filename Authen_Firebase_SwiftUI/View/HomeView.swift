@@ -9,29 +9,40 @@
 import SwiftUI
 
 struct HomeView: View {
-//    @State var isLoading: Bool = false
-//    @State var error: Error?
-    @ObservedObject var viewModel = ViewModel()
+    @EnvironmentObject var authState: AuthState
+    @State var isLoading: Bool = false
+    @State var error: Error?
+//    @ObservedObject var viewModel = ViewModel()
     
     var body: some View {
         NavigationView {
             ZStack {
                 if let url = URL(string: "https://apple.com") {
-//                    WebView(isLoading: $isLoading, error: $error, url: url)
-                    WebView(viewModel: viewModel, url: url)
+                    WebView(isLoading: $isLoading, error: $error, url: url)
+//                    WebView(viewModel: viewModel, url: url)
                 } else {
                     Text("HOmeView").font(.callout)
                 }
                 
-                if viewModel.isLoading {
+                if self.isLoading {
                     ActivityIndicator()
-                } else if let error = viewModel.error {
+                } else if let error = self.error {
                     Text(error.localizedDescription)
                 }
             }
+            .background(Color.yellow)
+            .navigationBarTitle("Home", displayMode: .inline)
+            .navigationBarItems(trailing: Button(action: signoutTapped, label: {
+                Image(systemName: "person.circle")
+                Text("Logout")
+            }))
+            .edgesIgnoringSafeArea(.vertical)
             
-        }.background(Color.yellow)
-        .navigationBarTitle("Home", displayMode: .inline)
+        }
+    }
+    
+    private func signoutTapped() {
+        authState.signOut()
     }
 }
 
