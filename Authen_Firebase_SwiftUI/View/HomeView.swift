@@ -21,7 +21,7 @@ struct HomeView: View {
                     WebView(isLoading: $isLoading, error: $error, url: url)
 //                    WebView(viewModel: viewModel, url: url)
                 } else {
-                    Text("HOmeView").font(.callout)
+                    Text("HomeView").font(.callout)
                 }
                 
                 if self.isLoading {

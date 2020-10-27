@@ -35,7 +35,7 @@ class AuthState: NSObject, ObservableObject {
             strongSelf.isAuthenticating = false
 
             guard let user = authResult?.user else {
-                print(error)
+                print(error?.localizedDescription)
                 return 
             }
             strongSelf.loggedinUser = user
@@ -47,6 +47,5 @@ class AuthState: NSObject, ObservableObject {
     func signOut() {
         try? auth.signOut()
     }
-    
     
 }
