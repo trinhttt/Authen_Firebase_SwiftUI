@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E1AA753254A227C00CF1369 /* AuthType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1AA752254A227C00CF1369 /* AuthType.swift */; };
 		0E3E21F425446DB300500904 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E3E21F325446DB300500904 /* GoogleService-Info.plist */; };
 		0E3E2208254473F800500904 /* AuthForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3E2207254473F800500904 /* AuthForm.swift */; };
 		0E3E221F2544F4FD00500904 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3E221E2544F4FD00500904 /* ActivityIndicator.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E1AA752254A227C00CF1369 /* AuthType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthType.swift; sourceTree = "<group>"; };
 		0E3E21F325446DB300500904 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0E3E2207254473F800500904 /* AuthForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthForm.swift; sourceTree = "<group>"; };
 		0E3E221E2544F4FD00500904 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				0E840EDB25472D5C008C2FAE /* AuthState.swift */,
+				0E1AA752254A227C00CF1369 /* AuthType.swift */,
 			);
 			name = Model;
 			path = ..;
@@ -258,6 +261,7 @@
 				0EEDAC6D2544657000026681 /* SceneDelegate.swift in Sources */,
 				0EEDAC6F2544657000026681 /* ContentView.swift in Sources */,
 				0E3E2225254516AA00500904 /* HomeView.swift in Sources */,
+				0E1AA753254A227C00CF1369 /* AuthType.swift in Sources */,
 				0E3E222B25454FB400500904 /* WebView.swift in Sources */,
 				0E840EDC25472D5C008C2FAE /* AuthState.swift in Sources */,
 				0E3E2208254473F800500904 /* AuthForm.swift in Sources */,

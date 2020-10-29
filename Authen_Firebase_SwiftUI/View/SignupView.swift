@@ -11,6 +11,7 @@ import SwiftUI
 struct SignupView: View {
     
     @EnvironmentObject var authState: AuthState
+    @State var authType = AuthType.login
     
     var body: some View {
         ZStack {
@@ -26,7 +27,7 @@ struct SignupView: View {
 //                        // Fallback on earlier versions
 //                    }
                 } else {
-                    AuthForm()
+                    AuthForm(authType: $authType)
                 }
             }
         }

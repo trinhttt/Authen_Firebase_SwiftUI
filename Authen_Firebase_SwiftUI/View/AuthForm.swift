@@ -12,13 +12,15 @@ struct AuthForm: View {
     @EnvironmentObject var authState: AuthState
     @State var email: String = ""
     @State var password: String = ""
+    @State var passwordConfirm: String = ""
     @State var isOn: Bool = false
+    @Binding var authType: AuthType
+    
     var body: some View {
         VStack {
             TextField("Email", text: $email)
                 .textContentType(.emailAddress)
                 .autocapitalization(.none)
-            
             if isOn {
                 TextField("Password", text: $password)
                     .textContentType(.password)
@@ -26,11 +28,27 @@ struct AuthForm: View {
             } else {
                 SecureField("Password", text: $password)
             }
+            
+            if authType == .signup {
+                if isOn {
+                    TextField("Password Confirm", text: $passwordConfirm)
+                        .textContentType(.password)
+                        .autocapitalization(.none)
+                } else {
+                    SecureField("Password Confirm", text: $passwordConfirm)
+                }
+            }
+            
             Toggle("Show pass", isOn: $isOn)
             
-            Button("Login") {
+            Button(authType.text) {
                 self.login()
             }.disabled(email.isEmpty || password.isEmpty)
+            
+            Button(action: footerButtonTapped) {
+                Text(authType.footerText)
+                    .font(.callout)
+            }
         }
         .textFieldStyle(RoundedBorderTextFieldStyle())
         .padding(30)
@@ -39,10 +57,22 @@ struct AuthForm: View {
     private func login() {
         authState.login(email: email, password: password)
     }
-}
-
-struct AuthForm_Previews: PreviewProvider {
-    static var previews: some View {
-        AuthForm()
+    
+    private func footerButtonTapped() {
+        clearFormField()
+        authType = authType == .signup ? .login : .signup
+    }
+    
+    private func clearFormField() {
+        email = ""
+        password = ""
+        passwordConfirm = ""
+        isOn = false
     }
 }
+
+//struct AuthForm_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AuthForm()
+//    }
+//}
