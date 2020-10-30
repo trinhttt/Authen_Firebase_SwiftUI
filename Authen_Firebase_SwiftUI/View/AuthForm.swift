@@ -42,7 +42,7 @@ struct AuthForm: View {
             Toggle("Show pass", isOn: $isOn)
             
             Button(authType.text) {
-                self.login()
+                self.authTapped()
             }.disabled(email.isEmpty || password.isEmpty)
             
             Button(action: footerButtonTapped) {
@@ -54,8 +54,13 @@ struct AuthForm: View {
         .padding(30)
     }
     
-    private func login() {
-        authState.login(email: email, password: password)
+    private func authTapped() {
+        switch authType {
+        case .login:
+            authState.login(email: email, password: password)
+        case .signup:
+            authState.signup(email: email, password: password, passwordConfirm: passwordConfirm)
+        }
     }
     
     private func footerButtonTapped() {
