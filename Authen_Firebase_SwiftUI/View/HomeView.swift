@@ -13,6 +13,7 @@ struct HomeView: View {
     @State var isLoading: Bool = false
     @State var error: Error?
 //    @ObservedObject var viewModel = ViewModel()
+    @State var isShowingToDo: Bool = false
     
     var body: some View {
         NavigationView {
@@ -30,12 +31,22 @@ struct HomeView: View {
                     Text(error.localizedDescription)
                 }
             }
+            .sheet(isPresented: $isShowingToDo) {
+                ToDoList()
+            }
             .background(Color.yellow)
             .navigationBarTitle("Home", displayMode: .inline)
-            .navigationBarItems(trailing: Button(action: signoutTapped, label: {
-                Image(systemName: "person.circle")
-                Text("Logout")
-            }))
+            .navigationBarItems(trailing:
+                                    HStack {
+                                        Button(action: gotoToDoView, label: {
+                                            Image(systemName: "square.and.pencil")
+                                            Text("ToDo")
+                                        })
+                                        Button(action: signoutTapped, label: {
+                                            Image(systemName: "person.circle")
+                                            Text("Logout")
+                                        })
+                                    })
             .edgesIgnoringSafeArea(.vertical)
             
         }
@@ -43,6 +54,10 @@ struct HomeView: View {
     
     private func signoutTapped() {
         authState.signOut()
+    }
+    
+    private func gotoToDoView() {
+        isShowingToDo = true
     }
 }
 

@@ -41,7 +41,6 @@ class AuthState: NSObject, ObservableObject {
     func signup(email: String, password: String, passwordConfirm: String) {
         guard password == passwordConfirm else {
             self.error = NSError(domain: "", code: 9000, userInfo: [NSLocalizedDescriptionKey: "Password and confirmation does not match"])
-            error?.localizedDescription
             return
         }
         
