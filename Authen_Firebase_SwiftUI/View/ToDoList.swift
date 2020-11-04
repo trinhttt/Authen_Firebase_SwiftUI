@@ -17,10 +17,19 @@ struct ToDoList: View {
     ]
     var body: some View {
         NavigationView {
-            List(todos) { todo in
-                TodoRow(todo: todo)
+            VStack {
+                NavigationLink(
+                    destination: AddTodoView(),
+                    label: {
+                        Text("Add new")
+                })
+                List(todos) { todo in
+                    NavigationLink(destination: TodoDetail(todo: todo)) {
+                        TodoRow(todo: todo)
+                    }
+                }
             }
-        }
+        }.navigationBarTitle("TO-DO")
     }
 }
 

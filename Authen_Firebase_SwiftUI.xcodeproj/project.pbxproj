@@ -17,6 +17,8 @@
 		0E653589254CDE4500BA1C2F /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E653588254CDE4500BA1C2F /* Todo.swift */; };
 		0E65358C254E145300BA1C2F /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E65358B254E145300BA1C2F /* ToDoList.swift */; };
 		0E65358F254E26C600BA1C2F /* TodoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E65358E254E26C600BA1C2F /* TodoRow.swift */; };
+		0E653592254E352200BA1C2F /* TodoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E653591254E352200BA1C2F /* TodoDetail.swift */; };
+		0E653595254E404E00BA1C2F /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E653594254E404E00BA1C2F /* AddTodoView.swift */; };
 		0E840EDC25472D5C008C2FAE /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E840EDB25472D5C008C2FAE /* AuthState.swift */; };
 		0EEDAC6B2544657000026681 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEDAC6A2544657000026681 /* AppDelegate.swift */; };
 		0EEDAC6D2544657000026681 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEDAC6C2544657000026681 /* SceneDelegate.swift */; };
@@ -38,6 +40,8 @@
 		0E653588254CDE4500BA1C2F /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		0E65358B254E145300BA1C2F /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
 		0E65358E254E26C600BA1C2F /* TodoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRow.swift; sourceTree = "<group>"; };
+		0E653591254E352200BA1C2F /* TodoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetail.swift; sourceTree = "<group>"; };
+		0E653594254E404E00BA1C2F /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
 		0E840EDB25472D5C008C2FAE /* AuthState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthState.swift; path = Authen_Firebase_SwiftUI/Model/AuthState.swift; sourceTree = "<group>"; };
 		0EEDAC672544657000026681 /* Authen_Firebase_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Authen_Firebase_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EEDAC6A2544657000026681 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +89,9 @@
 				0E3E222A25454FB400500904 /* WebView.swift */,
 				0E3E2224254516AA00500904 /* HomeView.swift */,
 				0E65358B254E145300BA1C2F /* ToDoList.swift */,
+				0E653594254E404E00BA1C2F /* AddTodoView.swift */,
 				0E65358E254E26C600BA1C2F /* TodoRow.swift */,
+				0E653591254E352200BA1C2F /* TodoDetail.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -277,7 +283,9 @@
 				0E3E222B25454FB400500904 /* WebView.swift in Sources */,
 				0E840EDC25472D5C008C2FAE /* AuthState.swift in Sources */,
 				0E3E2208254473F800500904 /* AuthForm.swift in Sources */,
+				0E653592254E352200BA1C2F /* TodoDetail.swift in Sources */,
 				0E3E221F2544F4FD00500904 /* ActivityIndicator.swift in Sources */,
+				0E653595254E404E00BA1C2F /* AddTodoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
